@@ -11,7 +11,7 @@ class PaletteList extends Component {
         this.goToPalette = this.goToPalette.bind(this);
     }
     goToPalette(id){
-        this.props.history.push(`/wes-anderson-palette/${id}`);
+        this.props.history.push(`/${id}`);
     }
     render() {
         const { palettes, classes } = this.props;

@@ -20,12 +20,12 @@ class App extends Component {
         <TransitionGroup>
           <CSSTransition key={location.key} classNames="page" timeout={400}>
             <Switch location={location}>
-              <Route exact path="/wes-anderson-palette" render={(routeProps) => (
+              <Route exact path="/" render={(routeProps) => (
                 <div className="page">
                   <PaletteList palettes={seedColors} {...routeProps} /> 
                 </div>
               )} />
-              <Route exact path="/wes-anderson-palette/:id" render={(routeProps) => (
+              <Route exact path="/:id" render={(routeProps) => (
                 <div className="page">
                   <Palette 
                   palette={generatePalette(this.findPalette(routeProps.match.params.id))} />
