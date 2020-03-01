@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7a17a82fda55c9dcba8911e0a0461171",
+    "revision": "b25395099204aed83ec3f67f6eafa14f",
     "url": "/wes-anderson-palette/index.html"
   },
   {
-    "revision": "3c73f29eab638e7dbcb2",
+    "revision": "78578df4a4a5928bb43c",
     "url": "/wes-anderson-palette/static/css/main.961e13fd.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wes-anderson-palette/static/js/2.a3919ef2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3c73f29eab638e7dbcb2",
-    "url": "/wes-anderson-palette/static/js/main.673c3960.chunk.js"
+    "revision": "78578df4a4a5928bb43c",
+    "url": "/wes-anderson-palette/static/js/main.0ecdc8f8.chunk.js"
   },
   {
     "revision": "97e984d5ef071553b6e5",
