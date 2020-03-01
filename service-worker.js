@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wes-anderson-palette/precache-manifest.56d9e52f18ec7f3a390bb151fa2b64aa.js"
+  "/wes-anderson-palette/precache-manifest.55ced293826246f03ac729566866216f.js"
 );
 
 self.addEventListener('message', (event) => {
