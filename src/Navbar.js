@@ -35,7 +35,7 @@ class Navbar extends Component {
         return (
             <header className={classes.Navbar}> 
                 <div className={classes.logo}>
-                    <Link to="/"><i class="fas fa-chevron-circle-left">  Palette List</i></Link>
+                    <Link to="/wes-anderson-palette"><i class="fas fa-chevron-circle-left">  Palette List</i></Link>
                 </div>
                 <div className={classes.selectContainer}>
                     <Select value={format} onChange={this.handleFormatChange} className="items">
