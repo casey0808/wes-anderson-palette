@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Palette from './Palette';
+import PaletteList from './PaletteList';
+import { Route, Switch } from 'react-router-dom';
+import { generatePalette } from './colorHelpers';
+import seedColors from './seedColors';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import './styles/App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  findPalette(id){
+    return seedColors.find(function(palette){
+      return palette.id === id;
+    })
+  }
+  render(){
+    return (
+      <Route render={({location}) => (
+        <TransitionGroup>
+          <CSSTransition key={location.key} classNames="page" timeout={400}>
+            <Switch location={location}>
+              <Route exact path="/" render={(routeProps) => (
+                <div className="page">
+                  <PaletteList palettes={seedColors} {...routeProps} /> 
+                </div>
+              )} />
+              <Route exact path="/palette/:id" render={(routeProps) => (
+                <div className="page">
+                  <Palette 
+                  palette={generatePalette(this.findPalette(routeProps.match.params.id))} />
+                </div>
+              )} />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
+      )}
+    />
+  )}
+  
 }
 
 export default App;
